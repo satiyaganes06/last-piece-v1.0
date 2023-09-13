@@ -48,7 +48,8 @@ Hence, in between the seller of the used books, the senior, and the used book bu
   </tr>
 </table>
 
-**And More...**
+https://github.com/satiyaganes06/last-piece-v1.0/assets/73154081/c32c0f27-8159-4f74-bbdc-00c2df83f011
+
 
 <p align="center">By using this application, the user can sell or buy the used book, but the user of the application also can access more than 100 expensive and exclusive eBooks and audiobook for free, and this feature is only available to the user who uses this application.  In the future, we add more eBooks and Audiobooks to encourage the user of this application. Moreover, this is the application's unique feature, other systems like Scribe, Amazon Kindle, and Shopee do not offer this feature to their user. This is one technique like BOGOF (Buy One, Get One) to attract users to use this application to buy or sell their used books. </p>
 
