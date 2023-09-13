@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/item_dashboard_margin"
+    android:background="@drawable/item_list_dashboard_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:cardCornerRadius="15dp"
+    android:padding="@dimen/item_dashboard_padding">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_dashboard_item_image"
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/content_description"
+            android:minHeight="@dimen/item_dashboard_image_height"
+            android:scaleType="fitXY"
+            android:src="@drawable/button_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/colorBorder"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_dashboard_item_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ll_dashboard_item_details" />
+
+        <LinearLayout
+            android:id="@+id/ll_dashboard_item_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/view_divider"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dashboard_item_paddingStartEnd"
+            android:paddingTop="@dimen/dashboard_item_paddingTopBottom"
+            android:paddingEnd="@dimen/dashboard_item_paddingStartEnd"
+            android:paddingBottom="@dimen/dashboard_item_paddingTopBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_dashboard_item_image">
+
+            <com.sg.lastpiece.utils.BoldTextView
+                android:id="@+id/tv_dashboard_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/textColor"
+                android:gravity="center"
+                android:textSize="@dimen/dashboard_item_textSize"
+                android:textStyle="bold"
+                tools:text="Item Name" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <com.sg.lastpiece.utils.BoldTextView
+                    android:id="@+id/tv_book_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Used book"
+                    android:textSize="8sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

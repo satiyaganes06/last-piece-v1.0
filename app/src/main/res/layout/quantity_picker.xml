@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/quantity_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_margin="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_remove"
+            android:background="@android:color/transparent"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_remove"/>
+
+        <EditText
+            android:id="@+id/et_item_quantity"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:textSize="14sp"
+            android:text="1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:background="@color/silver"/>
+
+        <ImageButton
+            android:id="@+id/btn_add"
+            android:layout_width="30dp"
+            android:background="@android:color/transparent"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_add_red"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:background="@color/silver"
+    android:paddingTop="40dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/fl_user_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="@dimen/account_address_margin">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="145dp"
+                android:layout_height="145dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/lightRed"
+                app:cardCornerRadius="250dp"
+                app:cardElevation="3dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="250dp">
+
+                    <ImageView
+                        android:id="@+id/iv_user_photo"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_default_user" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <com.sg.lastpiece.utils.BoldTextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fl_user_image"
+            android:textColor="@color/textColor"
+            android:textSize="12sp"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:id="@+id/btn_account_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:background="@color/colorImageViewBackground"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="@dimen/account_address_padding"
+            android:clickable="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="@dimen/btn_marginEnd">
+
+            <com.sg.lastpiece.utils.NormalTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/account_lbl_addresses_margin"
+                android:layout_weight="1"
+                android:text="@string/account_info"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/account_lbl_addresses_textSize" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/icon_arrow_right" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_sold_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_account_info"
+            android:background="@color/colorImageViewBackground"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="@dimen/account_address_padding"
+            android:clickable="true"
+            android:layout_marginStart="@dimen/btn_marginTop"
+            android:layout_marginTop="@dimen/btn_margin"
+            android:layout_marginEnd="@dimen/btn_marginEnd">
+
+            <com.sg.lastpiece.utils.NormalTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/account_lbl_addresses_margin"
+                android:layout_weight="1"
+                android:text="@string/account_sold_product"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/account_lbl_addresses_textSize" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/icon_arrow_right" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_sold_book"
+            android:background="@color/colorImageViewBackground"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="@dimen/account_address_padding"
+            android:clickable="true"
+            android:layout_marginStart="@dimen/btn_marginTop"
+            android:layout_marginTop="@dimen/btn_margin"
+            android:layout_marginEnd="@dimen/btn_marginEnd">
+
+            <com.sg.lastpiece.utils.NormalTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/account_lbl_addresses_margin"
+                android:layout_weight="1"
+                android:text="@string/account_address"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/account_lbl_addresses_textSize" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/icon_arrow_right" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_contact_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_address"
+            android:background="@color/colorImageViewBackground"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="@dimen/account_address_padding"
+            android:clickable="true"
+            android:layout_marginStart="@dimen/btn_marginTop"
+            android:layout_marginTop="@dimen/btn_margin"
+            android:layout_marginEnd="@dimen/btn_marginEnd">
+
+            <com.sg.lastpiece.utils.NormalTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/account_lbl_addresses_margin"
+                android:layout_weight="1"
+                android:text="@string/account_contact_us"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/account_lbl_addresses_textSize" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/icon_arrow_right" />
+
+        </LinearLayout>
+
+
+        <com.sg.lastpiece.utils.BoldTextView
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_contact_us"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/account_button_marginStartEnd"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="@dimen/account_button_marginStartEnd"
+            android:layout_marginBottom="@dimen/account_button_marginTopBottom"
+            android:background="@drawable/button_background"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingTop="@dimen/btn_padding"
+            android:paddingBottom="@dimen/btn_padding"
+            android:text="Logout"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/btn_textSize"
+            android:clickable="true"/>
+
+
+        <FrameLayout
+            android:id="@+id/fl_header_image"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/btn_logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:layout_width="@dimen/auth_logo_width_size"
+                android:layout_height="@dimen/auth_logo_height_size"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_last_piece_logo2" />
+        </FrameLayout>
+
+        <com.sg.lastpiece.utils.BoldTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fl_header_image"
+            android:text="@string/app_version"
+            android:textColor="@color/textColor"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+</ScrollView>

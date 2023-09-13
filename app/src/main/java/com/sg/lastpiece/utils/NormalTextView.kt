@@ -1,0 +1,35 @@
+package com.sg.lastpiece.utils
+
+import android.content.Context
+import android.graphics.Typeface
+import android.util.AttributeSet
+import androidx.appcompat.widget.AppCompatTextView
+
+// TODO Step 3: Create a custom class which inherits the AppCompactTextView. In this class I will apply the custom font to the TextView.
+// START
+/**
+ * This class will be used for Custom bold text using the TextView which inherits the AppCompactTextView class.
+ */
+class NormalTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(context, attrs) {
+
+    /**
+     * The init block runs every time the class is instantiated.
+     */
+    init {
+        // Call the function to apply the font to the components.
+        applyFont()
+    }
+
+    /**
+     * Applies a font to a TextView.
+     *
+     * @param textView TextView when the font should apply
+     */
+    private fun applyFont() {
+
+        // This is used to get the file from the assets folder and set it to the title textView.
+        val typeface: Typeface =
+                Typeface.createFromAsset(context.assets, "Montserrat-Regular.ttf")
+        setTypeface(typeface)
+    }
+}

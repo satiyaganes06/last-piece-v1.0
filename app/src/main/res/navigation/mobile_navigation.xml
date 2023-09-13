@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.sg.lastpiece.ui.ui.Fragments.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_product" />
+
+    <fragment
+        android:id="@+id/navigation_ebook_dashboard"
+        android:name="com.sg.lastpiece.ui.ui.Fragments.EbookDashboardFragment"
+        android:label="@string/title_ebook"
+        tools:layout="@layout/fragment_ebook_dashboard"/>
+
+    <fragment
+        android:id="@+id/navigation_add_product"
+        android:name="com.sg.lastpiece.ui.ui.Fragments.ProductFragment"
+        android:label="@string/title_add_product"
+        tools:layout="@layout/fragment_dashboard"/>
+
+    <fragment
+        android:id="@+id/navigation_orders"
+        android:name="com.sg.lastpiece.ui.ui.Fragments.ordersFragment"
+        android:label="@string/title_orders"
+        tools:layout="@layout/fragment_orders" />
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.sg.lastpiece.ui.ui.Fragments.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_account" />
+</navigation>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/silver"
+tools:context=".ui.ui.Fragments.DashboardFragment">
+
+   <!--<com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:fillColor="#FFFFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="@color/lightRed"
+        app:strokeWidth="1dp" /> -->
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/search_bar"
+        style="@style/MaterialSearchBarLight"
+        app:mt_hint="Book Name"
+        app:mt_placeholder="Search"
+        app:mt_searchIconDrawable="@drawable/icon_search"
+        app:mt_maxSuggestionsCount="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/sort_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@id/tv_changes_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_All_Book"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="All"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector"/>
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_fkom"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_sort_fkom"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_FTKKP"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_sort_ftkkp"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_ftkee"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_sort_ftkee"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_FTKMA"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_sort_ftkma"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_FTKA"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_sort_ftka"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector"/>
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_FTKPM"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_sort_ftkpm"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_PSM"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_sort_psm"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_FIST"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_sort_fist"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_fim"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_sort_fim"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_dashboard_items"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/sort_selection"
+        android:layoutAnimation="@anim/layout_animation"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sort_selection" />
+
+        <TextView
+            android:id="@+id/tv_no_dashboard_items_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/no_dashboard_item_found"
+            android:textAlignment="center"
+            android:textSize="@dimen/no_data_found_textSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

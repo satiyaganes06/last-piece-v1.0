@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/silver"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.ui.Fragments.EbookDashboardFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_auto"
+        app:cardCornerRadius="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/image_e1"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <HorizontalScrollView
+        android:id="@+id/sort_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_auto">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@id/tv_changes_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_All_Book"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="All"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector"/>
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_education"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_category_education"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_Anime"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_category_anime"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_action_A"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_category_Action_Adventure"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_thrillers"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_category_thrillers"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_fantasy"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_category_fantasy"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_historical"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_category_historical"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector"/>
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_Sci_Fi"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_category_Sci_Fi"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+                <com.sg.lastpiece.utils.ROBOTORadioButton
+                    android:id="@+id/rb_Biographies"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sort_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/til_category_biographies"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector" />
+
+
+
+            </RadioGroup>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_dashboard_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp"
+        android:visibility="gone"
+        android:layoutAnimation="@anim/layout_animation"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sort_selection" />
+
+    <TextView
+        android:id="@+id/tv_no_ebook_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/no_ebook_found_yet"
+        android:textAlignment="center"
+        android:textSize="@dimen/no_data_found_textSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

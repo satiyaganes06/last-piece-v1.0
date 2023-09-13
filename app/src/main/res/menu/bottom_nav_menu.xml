@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/icon_dashboard"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/navigation_ebook_dashboard"
+        android:icon="@drawable/icon_ebook"
+        android:title="@string/title_ebook" />
+
+    <item
+        android:id="@+id/navigation_add_product"
+        android:icon="@drawable/icon_add"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_orders"
+        android:icon="@drawable/icon_order"
+        android:title="@string/title_orders" />
+
+    <item
+        android:id="@+id/navigation_account"
+        android:icon="@drawable/icon_account"
+        android:title="@string/title_account" />
+</menu>

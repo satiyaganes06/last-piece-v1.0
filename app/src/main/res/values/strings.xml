@@ -1,0 +1,325 @@
+<resources>
+    <string name="app_name">lastPiece</string>
+    <string name="app_version">Version 1.0</string>
+    <string name="sG_Developer_Company">sgdevelopercompany@gmail.com</string>
+
+
+    <!--Common-->
+    <string name="please_wait">Please Wait&#8230;</string>
+    <string name="error">Error</string>
+
+    <!--Login Page Labels-->
+    <string name="content_description">image</string>
+    <string name="title_login">LOGIN</string>
+    <string name="et_hint_email_id">Email ID</string>
+    <string name="et_hint_password">Password</string>
+    <string name="lbl_forgot_password">Forgot Password?</string>
+    <string name="btn_lbl_login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="register"><u>Register</u></string>
+    <string name="login_success_message">You are logged successfully.</string>
+
+    <!--Forgot Password-->
+    <string name="title_forgot_password">Forgot Password</string>
+    <string name="forgot_password_title_description">Enter your username and e-mail address we\'ll send you a email to reset your password</string>
+    <string name="btn_lbl_submit">Submit</string>
+    <string name="email_sent_success">\"Email sent successfully to reset your password! \"</string>
+
+    <!--Register Page Labels -->
+    <string name="create_an_account">CREATE AN ACCOUNT</string>
+
+    <string name="hint_last_name">Last name</string>
+    <string name="hint_first_name">First name</string>
+    <string name="et_hint_matric_id">Student ID</string>
+    <string name="et_hint_confirm_password">Confirm Password</string>
+    <string name="et_hint_phone_number">Phone Number</string>
+
+    <string name="i_agree_to_the_terms_and_condition">I Agree To The <u> Terms &amp; Condition </u></string>
+    <string name="btn_lbl_register">Register</string>
+
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login"><u>Login</u></string>
+    <string name="register_success_message">You are Registered successfully.</string>
+
+    <!--Validation  -->
+    <string name="err_msg_enter_first_name">Please enter first name.</string>
+    <string name="err_msg_enter_last_name">Please enter last name.</string>
+    <string name="err_msg_enter_matric">Please enter Matric ID.</string>
+    <string name="err_msg_enter_matric1">Error Matric ID</string>
+    <string name="err_msg_enter_email">Please enter email.</string>
+    <string name="err_msg_enter_phone_number">Please enter phone number</string>
+    <string name="err_msg_enter_phone_number1">Must be below 14 number</string>
+    <string name="err_msg_enter_password">Please enter password.</string>
+    <string name="err_msg_enter_confirm_password">Please enter confirm password.</string>
+    <string name="err_msg_password_and_confirm_password_mismatch">Password and confirm password does not match.</string>
+    <string name="err_msg_agree_terms_and_condition">Please agree terms and condition.</string>
+
+    <!--Term & Condition-->
+    <string name="term_condition"><b>Terms &amp; Conditions</b>
+        By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app. You’re not allowed to copy, or modify the app, any part of the app, or our trademarks in any way. You’re not allowed to attempt to extract the source code of the app, and you also shouldn’t try to translate the app into other languages, or make derivative versions. The app itself, and all the trade marks, copyright, database rights and other intellectual property rights related to it, still belong to SHATTHIYA GANES .
+        SHATTHIYA GANES is committed to ensuring that the app is as useful and efficient as possible. For that reason, we reserve the right to make changes to the app or to charge for its services, at any time and for any reason. We will never charge you for the app or its services without making it very clear to you exactly what you’re paying for.
+        The lastPiece app stores and processes personal data that you have provided to us, in order to provide my Service. It’s your responsibility to keep your phone and access to the app secure. We therefore recommend that you do not jailbreak or root your phone, which is the process of removing software restrictions and limitations imposed by the official operating system of your device. It could make your phone vulnerable to malware/viruses/malicious programs, compromise your phone’s security features and it could mean that the lastPiece app won’t work properly or at all.
+        The app does use third party services that declare their own Terms and Conditions.
+        Link to Terms and Conditions of third party service providers used by the app
+                <ui>
+                    <li>Google Play Services</li>
+                    <li>Google Analytics for Firebase</li>
+                    <li>Google Analytics for Firebase</li>
+                    <li>Firebase Crashlytics</li>
+                </ui>
+        You should be aware that there are certain things that SHATTHIYA GANES will not take responsibility for. Certain functions of the app will require the app to have an active internet connection. The connection can be Wi-Fi, or provided by your mobile network provider, but SHATTHIYA GANES cannot take responsibility for the app not working at full functionality if you don’t have access to Wi-Fi, and you don’t have any of your data allowance left.
+        If you’re using the app outside of an area with Wi-Fi, you should remember that your terms of the agreement with your mobile network provider will still apply. As a result, you may be charged by your mobile provider for the cost of data for the duration of the connection while accessing the app, or other third party charges. In using the app, you’re accepting responsibility for any such charges, including roaming data charges if you use the app outside of your home territory (i.e. region or country) without turning off data roaming. If you are not the bill payer for the device on which you’re using the app, please be aware that we assume that you have received permission from the bill payer for using the app.
+        Along the same lines, SHATTHIYA GANES cannot always take responsibility for the way you use the app i.e. You need to make sure that your device stays charged – if it runs out of battery and you can’t turn it on to avail the Service, SHATTHIYA GANES cannot accept responsibility.
+        With respect to SHATTHIYA GANES ’s responsibility for your use of the app, when you’re using the app, it’s important to bear in mind that although we endeavour to ensure that it is updated and correct at all times, we do rely on third parties to provide information to us so that we can make it available to you. SHATTHIYA GANES accepts no liability for any loss, direct or indirect, you experience as a result of relying wholly on this functionality of the app.
+        At some point, we may wish to update the app. The app is currently available on Android – the requirements for system(and for any additional systems we decide to extend the availability of the app to) may change, and you’ll need to download the updates if you want to keep using the app. SHATTHIYA GANES does not promise that it will always update the app so that it is relevant to you and/or works with the Android version that you have installed on your device. However, you promise to always accept updates to the application when offered to you, We may also wish to stop providing the app, and may terminate use of it at any time without giving notice of termination to you. Unless we tell you otherwise, upon any termination, (a) the rights and licenses granted to you in these terms will end; (b) you must stop using the app, and (if needed) delete it from your device. <br />
+        <br /><b>Changes to This Terms and Conditions</b>
+        I may update our Terms and Conditions from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Terms and Conditions on this page.
+        These terms and conditions are effective as of 2021-02-21 <br />
+        <br /><b>Contact Us</b>
+        If you have any questions or suggestions about my Terms and Conditions, do not hesitate to contact me at sgdevelopercompany@gmail.com.
+    </string>
+
+    <!--User Profile -->
+    <string name="profile_page_title">PROFILE</string>
+    <string name="rb_lbl_male">MALE</string>
+    <string name="rb_lbl_female">FEMALE</string>
+    <string name="btn_lbl_save">Save</string>
+    <string name="profile_changes_descript">Please login again to see the changes</string>
+    <string name="err_msg_enter_mobile_number">Please enter mobile number.</string>
+    <string name="msg_profile_update_success">Your profile is updated successfully.</string>
+
+    <!--User Permisssion -->
+    <string name="image_selection_failed">Image selection Failed!</string>
+    <string name="read_storage_permission_denied">Oops, you just denied the permission for storage. You can also allow it from settings.</string>
+
+    <!--Bottom Navigation-->
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_ebook">e-Book</string>
+    <string name="title_add_product">My Product</string>
+    <string name="title_orders">Orders</string>
+    <string name="title_account">Account</string>
+
+
+    <string name="please_click_back_again_to_exit">Please click back again to exit.</string>
+
+    <!--Dashboard Page-->
+    <string name="action_shop_cart">Shopping Cart</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_dashboard_item_found">No items found!</string>
+
+
+    <!--Account Page-->
+    <string name="account_info">Account Information</string>
+    <string name="account_address">My Addresses</string>
+    <string name="account_sold_product">My Sold Product</string>
+    <string name="account_contact_us">Contact Us</string>
+    <string name="log_out_dialog_title">Log Out</string>
+    <string name="log_out_dialog_message">Are you sure you want to logout?</string>
+
+
+    <!--Add Product Page-->
+    <string name="title_adding_book">Add Book</string>
+    <string name="et_hint_book_title">Book Title</string>
+    <string name="et_hint_book_price">Book Price (RM)</string>
+    <string name="et_hint_book_description">Book Description</string>
+    <string name="et_hint_book_quantity">Book Quantity</string>
+    <string name="et_hint_book_category">Book Category</string>
+    <string name="et_hint_book_author">Book Author</string>
+    <string name="btn_lbl_add">Add</string>
+
+    <string name="err_msg_select_book_image">Please select book image.</string>
+    <string name="err_msg_enter_book_title">Please enter book title.</string>
+    <string name="err_msg_enter_book_price">Please enter book price.</string>
+    <string name="err_msg_enter_book_description">Please enter book description.</string>
+    <string name="err_msg_enter_book_quantity">Please enter book quantity.</string>
+    <string name="err_msg_enter_book_category">Please select book category.</string>
+    <string name="err_msg_enter_book_condition">Please select book condition.</string>
+    <string name="err_msg_enter_book_author">Please enter book author.</string>
+
+    <string name="book_uploaded_success_message">Your product is uploaded successfully.</string>
+    <string name="no_books_added_yet">No books added yet!</string>
+
+
+    <!--Product Page-->
+    <string name="book_delete_success_message">Your book product is deleted successfully.</string>
+    <string name="delete_dialog_title">Delete</string>
+    <string name="delete_dialog_message">Are you sure you want to delete the book product?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+
+    <!--Shopping card-->
+    <string name="no_cart_book_added_yet">No item found in cart!</string>
+
+
+    <!--Order Page-->
+    <string name="no_order_book_product_yet">No order item found in Order!</string>
+
+
+    <!--Ebook Dashboard Page-->
+    <string name="action_wishlist">My Wishlist</string>
+    <string name="action_add_ebook">Add e-Book</string>
+    <string name="no_ebook_found_yet">No ebook found yet!</string>
+    <string name="lbl_ebook_details_category">e-Book Category</string>
+    <string name="lbl_ebook_details_author">e-Book Author</string>
+
+    <!--e-Book Details-->
+    <string name="lbl_ebook_description">e-Book Description</string>
+    <string name="read_ebook">Read</string>
+    <string name="success_message_item_added_to_wishlist">ebook is added to your wishlist.</string>
+
+    <!--My Wishlist-->
+    <string name="no_ebook_added_yet">No ebook found in wishlist!</string>
+    <string name="msg_wishlist_item_removed_successfully">e-book removed from wishlist</string>
+
+    <!--Add eBook-->
+    <string name="err_msg_select_ebook_image">Please select ebook image.</string>
+    <string name="err_msg_select_ebook_pdf_document">Please select ebook PDF Document.</string>
+    <string name="err_msg_enter_ebook_title">Please enter ebook title.</string>
+    <string name="err_msg_enter_ebook_description">Please enter ebook description.</string>
+    <string name="err_msg_enter_ebook_category">Please select ebook category.</string>
+    <string name="err_msg_enter_ebook_author">Please enter ebook author.</string>
+
+    <string name="ebook_uploaded_success_message">The eBook is uploaded successfully.</string>
+    <string name="ebook_deleted_success_message">The eBook is deleted successfully.</string>
+
+    <!--Product details Page-->
+    <string name="action_book_details">Book</string>
+    <string name="lbl_book_description">Book Description: </string>
+    <string name="btn_lbl_add_to_cart">Add to Cart</string>
+    <string name="btn_lbl_contact">Contact Seller</string>
+    <string name="btn_lbl_go_to_cart">Go To Cart</string>
+    <string name="lbl_book_details_condition">Book Condition: </string>
+    <string name="lbl_book_details_category">Book Category:</string>
+    <string name="lbl_book_details_faculty">Book Faculty:</string>
+    <string name="lbl_book_details_author">Book Author:</string>
+    <string name="lbl_book_details_">Book Author:</string>
+    <string name="lbl_book_details_seller">Seller Name: </string>
+    <string name="lbl_book_details_seller_contact">Seller Contact: </string>
+    <string name="err_msg_to_mininum">Minimum quantity to choose is 1 !</string>
+    <string name="err_msg_to_choose">Please Choose Quantity !!</string>
+    <string name="suggest_Book_Item">---You may also like---</string>
+
+
+    <!--Add to Cart-->
+    <string name="success_message_item_added_to_cart">Product is added to your cart.</string>
+    <string name="no_cart_item_found">No item found in cart!</string>
+    <string name="lbl_subtotal">Subtotal</string>
+    <string name="lbl_shipping_charge">Shipping Charge</string>
+    <string name="lbl_total_amount">Total Amount</string>
+    <string name="btn_lbl_checkout">Checkout</string>
+    <string name="action_cart">My Cart</string>
+    <string name="lbl_out_of_stock">OUT OF STOCK</string>
+    <string name="lbl_stock_was_deleted">DELETED BY SELLER</string>
+    <string name="msg_item_removed_successfully">Item removed successfully.</string>
+    <string name="msg_for_available_stock">Available stock is 1 !. You can not add more than stock quantity.</string>
+
+    <!--My Address-->
+    <string name="title_address_list">ADDRESS LIST</string>
+    <string name="no_address_found">No Address Found!</string>
+    <string name="lbL_add_address">Add Address</string>
+    <string name="message_to_user">Swipe right to edit &amp; left to delete </string>
+
+    <string name="title_add_address">ADD ADDRESS</string>
+    <string name="hint_full_name">Full name</string>
+    <string name="hint_phone_number">Phone number</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_zip_code">ZipCode</string>
+    <string name="hint_additional_note">Additional note</string>
+    <string name="hint_other_details">Other details</string>
+    <string name="lbl_room">ROOM</string>
+    <string name="lbl_office">OFFICE</string>
+    <string name="lbl_other">OTHER</string>
+
+
+    <string name="err_msg_please_enter_full_name">Please enter full name.</string>
+    <string name="err_msg_please_enter_phone_number">Please enter phone number.</string>
+    <string name="err_msg_please_enter_address">Please enter address.</string>
+    <string name="err_msg_please_enter_zip_code">Please enter zip-code.</string>
+    <string name="err_msg_please_enter_other_details">Please enter other details.</string>
+
+    <string name="err_your_address_added_successfully">Your address is added successfully.</string>
+
+    <string name="title_edit_address">EDIT ADDRESS</string>
+    <string name="btn_lbl_update">UPDATE</string>
+    <string name="msg_your_address_updated_successfully">Your address is updated successfully.</string>
+
+    <string name="err_your_address_deleted_successfully">Your address is deleted successfully.</string>
+    <string name="title_select_address">SELECT ADDRESS</string>
+
+
+    <!--My Sold Product-->
+    <string name="no_sold_product_found">No Sold Product Found!</string>
+    <string name="title_sold_product_details">SOLD PRODUCT DETAILS</string>
+    <string name="btn_lbl_update_order_status">UPDATE</string>
+    <string name="msg_order_status_updated_successfully">Order status is updated successfully.</string>
+
+
+    <!--Checkout Page-->
+    <string name="title_checkout">CHECKOUT</string>
+    <string name="checkout_lbl_product_items">Product Items</string>
+    <string name="checkout_lbl_selected_address">Selected Address</string>
+    <string name="checkout_lbl_items_receipt">Items Receipt</string>
+    <string name="lbl_payment_mode">Payment Mode : </string>
+    <string name="lbl_select_card">Select Card : </string>
+    <string name="lbl_cash_on_delivery">Cash On Delivery</string>
+    <string name="checkout_success_message">Your order placed successfully.</string>
+    <string name="btn_lbl_place_order">PLACE ORDER</string>
+    <string name="err_msg_enter_payment_method">Please select payment method.</string>
+    <string name="err_msg_enter_select_card">Please select card.</string>
+    <string name="cash_on_delivery">Cash On Delivery</string>
+    <string name="debit_credit_card">Debit/Credit Card</string>
+    <string name="select_payment_method">Visa/Master</string>
+
+
+    <!--Stripe Payment Page-->
+    <string name="action_debit_Card">Debit Card</string>
+    <string name="btn_lbl_pay_order">Pay</string>
+    <string name="payment_success_message">Payment succeeded</string>
+    <string name="payment_fail_message">Payment failed</string>
+
+    <string name="success_payment">PAYMENT SUCCESS</string>
+    <string name="fail_payment">PAYMENT FAIL</string>
+
+    <!--My Order Page-->
+    <string name="no_orders_placed_yet">No orders placed yet!</string>
+
+    <string name="title_my_order_details">MY ORDER DETAILS</string>
+    <string name="order_details_lbl">Order Details</string>
+    <string name="order_details_lbl_order_id">Order ID</string>
+    <string name="order_details_lbl_order_date">Order Date</string>
+    <string name="order_details_lbl_order_status">Order Status</string>
+    <string name="order_status_pending">Pending</string>
+    <string name="order_details_lbl_review">To Review</string>
+    <string name="order_details_lbl_shipping_address">Shipping Address</string>
+
+    <string name="order_status_in_process">In Process</string>
+    <string name="order_status_delivered">Delivered</string>
+
+    <!--Book Image View Page-->
+    <string name="Book_Title">Book Title</string>
+
+    <!--Sorting Faculty-->
+    <string name="til_sort_ftkkp">FTKKP</string>
+    <string name="til_sort_fkom">FKOM</string>
+    <string name="til_sort_ftkee">FTKEE</string>
+    <string name="til_sort_ftkma">FTKMA</string>
+    <string name="til_sort_ftka">FTKA</string>
+    <string name="til_sort_ftkpm">FTKPM</string>
+    <string name="til_sort_psm">PSM</string>
+    <string name="til_sort_fist">FIST</string>
+    <string name="til_sort_fim">FIM</string>
+
+    <!--Sorting eBook Category-->
+    <string name="til_category_education">Education</string>
+    <string name="til_category_Action_Adventure">Action Adventure</string>
+    <string name="til_category_thrillers">Thriller</string>
+    <string name="til_category_fantasy">Fantasy</string>
+    <string name="til_category_historical">Historical</string>
+    <string name="til_category_Sci_Fi">Sci-Fi</string>
+    <string name="til_category_biographies">Biographies</string>
+    <string name="til_category_anime">Anime</string>
+
+
+</resources>

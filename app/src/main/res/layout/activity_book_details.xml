@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Activities.BookDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_book_details_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/darkRed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.sg.lastpiece.utils.BoldTextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="@dimen/toolbar_title_paddingStart"
+            android:paddingEnd="0dp"
+            android:text="@string/action_book_details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbar_title_text_size"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_book_details_activity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_book_detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/book_detail_image_height"
+                android:background="@color/colorImageViewBackground"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_book_details_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/book_details_title_price_marginTop"
+                android:orientation="vertical"
+                android:padding="@dimen/book_details_title_price_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_book_detail_image">
+
+                <com.sg.lastpiece.utils.BoldTextView
+                    android:id="@+id/tv_book_details_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_title_textSize"
+                    tools:text="Book Title" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pickerNprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/book_details_title_price_padding"
+                app:layout_constraintBottom_toTopOf="@+id/tv_book_details_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_book_details_title">
+
+                <LinearLayout
+                    android:id="@+id/quantity_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="top"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent">
+
+                    <ImageButton
+                        android:id="@+id/btn_remove"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/icon_remove" />
+
+                    <EditText
+                        android:id="@+id/et_item_quantity"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@color/silver"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/btn_add"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/icon_add_red" />
+
+                </LinearLayout>
+
+                <com.sg.lastpiece.utils.NormalTextView
+                    android:id="@+id/tv_book_details_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_price_textSize"
+                    tools:text="RM 80.00" />
+
+            </LinearLayout>
+
+            <com.sg.lastpiece.utils.BoldTextView
+                android:id="@+id/tv_book_details_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/book_details_label_margin"
+                android:text="@string/lbl_book_description"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/book_details_label_textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pickerNprice" />
+
+            <com.sg.lastpiece.utils.NormalTextView
+                android:id="@+id/tv_book_details_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/book_details_label_margin"
+                android:layout_marginEnd="@dimen/book_details_label_margin"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/book_details_description_textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_book_details_label"
+                android:text="ahdgashdgah dagdhagd hagdha gdahgda jhdgahdgah dgahdgadha gdsvxbc dbsah dadh ssbh"
+                tools:text="This is product details description." />
+
+
+            <LinearLayout
+                android:id="@+id/ll_book_details_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/book_details_label_margin"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_book_details_description">
+
+                <com.sg.lastpiece.utils.BoldTextView
+                    android:id="@+id/tv_book_details_condition_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/book_details_condition_paddingStartEnd"
+                    android:text="@string/lbl_book_details_condition"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_label_textSize" />
+
+                <com.sg.lastpiece.utils.NormalTextView
+                    android:id="@+id/tv_book_details_condition_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_condition_textSize"
+                    tools:text="Used Book" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_book_details_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/book_details_label_margin"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_book_details_condition">
+
+                <com.sg.lastpiece.utils.BoldTextView
+                    android:id="@+id/tv_book_details_category_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/book_details_condition_paddingStartEnd"
+                    android:text="@string/lbl_book_details_category"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_label_textSize" />
+
+                <com.sg.lastpiece.utils.NormalTextView
+                    android:id="@+id/tv_book_details_category_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_condition_textSize"
+                    tools:text="Category" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_book_details_faculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/book_details_label_margin"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_book_details_category">
+
+                <com.sg.lastpiece.utils.BoldTextView
+                    android:id="@+id/tv_book_details_faculty_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/book_details_condition_paddingStartEnd"
+                    android:text="@string/lbl_book_details_faculty"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_label_textSize" />
+
+                <com.sg.lastpiece.utils.NormalTextView
+                    android:id="@+id/tv_book_details_faculty_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_condition_textSize"
+                    tools:text="FKOM" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_book_details_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/book_details_label_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_book_details_faculty">
+
+                <com.sg.lastpiece.utils.BoldTextView
+                    android:id="@+id/tv_book_details_author_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/book_details_condition_paddingStartEnd"
+                    android:text="@string/lbl_book_details_author"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_label_textSize" />
+
+                <com.sg.lastpiece.utils.NormalTextView
+                    android:id="@+id/tv_book_details_author_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_condition_textSize"
+                    tools:text="Author" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_book_details_seller_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/book_details_label_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_book_details_author">
+
+                <com.sg.lastpiece.utils.BoldTextView
+                    android:id="@+id/tv_book_details_seller_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/book_details_condition_paddingStartEnd"
+                    android:text="@string/lbl_book_details_seller"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_label_textSize" />
+
+                <com.sg.lastpiece.utils.NormalTextView
+                    android:id="@+id/tv_book_details_seller_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_condition_textSize"
+                    tools:text="Seller Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_book_details_seller_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/book_details_label_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_book_details_seller_name">
+
+                <com.sg.lastpiece.utils.BoldTextView
+                    android:id="@+id/tv_book_details_seller_contact_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/book_details_condition_paddingStartEnd"
+                    android:text="@string/lbl_book_details_seller_contact"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_label_textSize" />
+
+                <com.sg.lastpiece.utils.NormalTextView
+                    android:id="@+id/tv_book_details_seller_contact_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_condition_textSize"
+                    tools:text="Seller Number" />
+            </LinearLayout>
+
+            <com.sg.lastpiece.utils.MSPButton
+                android:id="@+id/btn_go_to_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/button_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="@dimen/btn_padding"
+                android:paddingBottom="@dimen/btn_padding"
+                android:text="@string/btn_lbl_go_to_cart"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/btn_textSize"
+                app:layout_constraintBottom_toTopOf="@+id/btn_contact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_book_details_seller_contact" />
+
+            <com.sg.lastpiece.utils.MSPButton
+                android:id="@+id/btn_add_to_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/button_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="@dimen/btn_padding"
+                android:paddingBottom="@dimen/btn_padding"
+                android:text="@string/btn_lbl_add_to_cart"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/btn_textSize"
+                app:layout_constraintBottom_toTopOf="@+id/btn_contact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_book_details_seller_contact" />
+
+            <com.sg.lastpiece.utils.MSPButton
+                android:id="@+id/btn_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/button_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="@dimen/btn_padding"
+                android:paddingBottom="@dimen/btn_padding"
+                android:text="@string/btn_lbl_contact"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/btn_textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_add_to_cart" />
+
+
+            <com.sg.lastpiece.utils.NormalTextView
+                android:id="@+id/tv_suggest_Title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/suggest_Book_Item"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/txt_terms_and_condition_textSize"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_contact"
+                tools:text="@string/suggest_Book_Item" />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_dashboard_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_suggest_Title" />
+
+            <com.sg.lastpiece.utils.NormalTextView
+                android:id="@+id/margin_Below"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/rv_dashboard_items"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Activities.EbookDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_ebook_details_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/darkRed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.sg.lastpiece.utils.BoldTextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="@dimen/toolbar_title_paddingStart"
+            android:paddingEnd="0dp"
+            android:text="@string/title_ebook"
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbar_title_text_size"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_ebook_details_activity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_ebook_detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/book_detail_image_height"
+                android:background="@color/colorImageViewBackground"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_ebook_details_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:padding="@dimen/book_details_title_price_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_ebook_detail_image">
+
+                <com.sg.lastpiece.utils.BoldTextView
+                    android:id="@+id/tv_ebook_details_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_title_textSize"
+                    tools:text="e-Book Title" />
+
+            </LinearLayout>
+
+
+            <com.sg.lastpiece.utils.BoldTextView
+                android:id="@+id/tv_ebook_details_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/book_details_label_margin"
+                android:text="@string/lbl_ebook_description"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/book_details_label_textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_ebook_details_title" />
+
+            <com.sg.lastpiece.utils.NormalTextView
+                android:id="@+id/tv_ebook_details_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/book_details_label_margin"
+                android:layout_marginEnd="@dimen/book_details_label_margin"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/book_details_description_textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ebook_details_label"
+                tools:text="This is e-Book details description." />
+
+
+            <LinearLayout
+                android:id="@+id/ll_ebook_details_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/book_details_label_margin"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ebook_details_description">
+
+                <com.sg.lastpiece.utils.BoldTextView
+                    android:id="@+id/tv_ebook_details_category_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/book_details_condition_paddingStartEnd"
+                    android:text="@string/lbl_ebook_details_category"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_label_textSize" />
+
+                <com.sg.lastpiece.utils.NormalTextView
+                    android:id="@+id/tv_ebook_details_category_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_condition_textSize"
+                    tools:text="Category" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ebook_details_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/book_details_label_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_ebook_details_category">
+
+                <com.sg.lastpiece.utils.BoldTextView
+                    android:id="@+id/tv_ebook_details_author_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/book_details_condition_paddingStartEnd"
+                    android:text="@string/lbl_ebook_details_author"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_label_textSize" />
+
+                <com.sg.lastpiece.utils.NormalTextView
+                    android:id="@+id/tv_ebook_details_author_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/book_details_condition_textSize"
+                    tools:text="Author" />
+            </LinearLayout>
+
+            <com.sg.lastpiece.utils.MSPButton
+                android:id="@+id/btn_read"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/button_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="@dimen/btn_padding"
+                android:paddingBottom="@dimen/btn_padding"
+                android:text="@string/read_ebook"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/btn_textSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_ebook_details_author"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/ft_after_wish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="220dp"
+                android:clickable="true"
+                android:backgroundTint="@color/darkRed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.867"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_ebook_detail_image"
+                app:srcCompat="@drawable/icon_after_wish"
+                android:focusable="true" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/ft_before_wish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="220dp"
+                android:clickable="true"
+                android:tint="@color/black"
+                app:backgroundTint="@color/silver"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.867"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_ebook_detail_image"
+                app:srcCompat="@drawable/icon_before_wish"
+                android:focusable="true" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/flbtn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="220dp"
+                android:clickable="true"
+                android:tint="@color/silver"
+                app:backgroundTint="@color/lightRed"
+                app:layout_constraintEnd_toStartOf="@+id/ft_after_wish"
+                app:layout_constraintHorizontal_bias="0.96"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_delete_white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
