@@ -97,7 +97,7 @@ object Constants {
 
     // Stripe
     const val EXTRA_AMOUNT : String = "amount"
-    const val PUBLISHABLE_KEY : String = "pk_test_51In0KiD3mAWixS5XzF5qt2klxTtWB4ktSjKXBJdQx76xQnRLI82fSuPLNr0aqTf0F3hNEf7fEKKv3qbkrJwXDQFI008N8Q1xNs"
+    const val PUBLISHABLE_KEY : String = "xxxxxxxxxx"
 
     //A function for user profile image selection from phone storage.
     fun showImageChooser(activity: Activity) {
